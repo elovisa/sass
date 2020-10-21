@@ -1,0 +1,110 @@
+$bg-color:white;
+$margin-zero:0;
+
+@mixin grid(){
+    display: grid;
+    grid-template-columns:auto auto auto;
+    grid-column-gap:5px;
+    grid-row-gap:10px;
+}
+
+/* Bakgroundfärgen på body*/
+body {
+	font-family:calibri;
+	background-color:$bg-color;	
+}
+/*Rubriken*/
+* {
+	left:$margin-zero;
+	right:$margin-zero;
+}
+/*Navigation bar*/
+nav {
+    ul {
+	list-style-type:none;
+	overflow:hidden;
+	background-color:blue;
+	left:0;
+	margin:$zero;
+	padding:0;
+	display:block;
+	text-transform:uppercase;
+    }
+
+    li{
+    float:left;
+    }
+
+    a {
+	float:left;
+	color:#f2f2f2;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	font-size: 17px;
+	color:black;
+    }
+    a:hover {
+	background-color:#b8b8b8;
+    }
+/*Bestämmer färgen på den aktiva sidan*/
+    a.active {
+	border-bottom:solid;
+	border-color:#ababab;
+    }
+}
+/*Bestämmer innehållet*/
+.main {
+	height:100%;
+	width:85%;
+	float:right;
+	text-align:center;
+}
+
+.container {
+    @include grid();
+    background-color:$bg-color;
+ 	padding:10px;
+ 	margin-left:10px;
+}
+.container2 {
+	display:grid;
+	grid-template-columns:auto auto;
+	text-align:center;
+	margin-left: 20px;
+}
+.text {
+	 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	 margin:10px;
+	 padding:10px;
+}
+img {
+	width:350px;
+}
+
+/*Sidebar*/
+aside {
+	height:100%;
+	width:15%;
+	position:absolute;
+	left:$margin-zero;
+	padding:20px;
+
+    h2{
+        font-size:20px;
+    }
+}
+/*Listan i sidbaren*/
+
+footer{
+	position:fixed;
+	left:$margin-zero;
+	bottom:$margin-zero;
+	text-align:center;
+	width:100%;
+    background-color:$bg-color;
+    
+    h2{
+    font-size:12px;
+    }
+}
